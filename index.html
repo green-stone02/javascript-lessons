@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Lessons</title>
+    <link rel="stylesheet" href="jsLessons.css">
+</head>
+<body>
+    <section>
+        <h1>String Methods</h1>
+        <div>
+            <h2>.length</h2>
+            <p>displays the length of a string including spaces:</p>
+            <p id="sample1">Hello World</p>
+            <button onclick="func1()">Show</button>
+            <p id="result1">(Result)</p>
+            <br>
+            <input type="text" id="sample1B">
+            <button onclick="func1B()">Show</button>
+            <p id="result1B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.toUpperCase()</h2>
+            <p>converts string to uppercase:</p>
+            <p id="sample2">hello world</p>
+            <button onclick="func2()">Show</button>
+            <p id="result2">(Result)</p>
+            <br>
+            <input type="text" id="sample2B">
+            <button onclick="func2B()">Show</button>
+            <p id="result2B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.toLowerCase()</h2>
+            <p>converts string to lowercase:</p>
+            <p id="sample3">HELLO WORLD</p>
+            <button onclick="func3()">Show</button>
+            <p id="result3">(Result)</p>
+            <br>
+            <input type="text" id="sample3B">
+            <button onclick="func3B()">Show</button>
+            <p id="result3B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.includes()</h2>
+            <p>checks if a string exists:</p>
+            <p id="sample4">Hello World</p>
+            <button onclick="func4()">Check if "World" exists in the string</button>
+            <p id="result4">(Result)</p>
+            <br>
+            <p>Input a letter in lowercase and check if that letter exists in "qwerty"</p>
+            <input type="text" id="sample4B">
+            <button onclick="func4B()">Test</button>
+            <p id="result4B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.indexOf()</h2>
+            <p>gives the position of the first occurence of a specified value in a string (it will give -1 if none):</p>
+            <p id="sample5">HELLO WORLD</p>
+            <button onclick="func5()">Show where W first occured</button>
+            <p id="result5">(Result)</p>
+            <br>
+            <p>Input a letter or word to check where is the first occurence of that in the word "Hello World"</p>
+            <input type="text" id="sample5B">
+            <button onclick="func5B()">Show</button>
+            <p id="result5B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.lastIndexOf()</h2>
+            <p>gives the position of the last occurence of a specified value in a string (it will give -1 if none):</p>
+            <p id="sample6">HELLO WORLD</p>
+            <button onclick="func6()">Show where O last occured</button>
+            <p id="result6">(Result)</p>
+            <br>
+            <p>Input a letter or word to check where is the last occurence of that in the word "Hello World"</p>
+            <input type="text" id="sample6B">
+            <button onclick="func6B()">Show</button>
+            <p id="result6B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.slice()</h2>
+            <p>it extracts the specified index .slice(beginning, end) you can also start your counting from end to beginning by using
+                negative numbers .slice(-beginning, -end):</p>
+            <p id="sample7">Hello World</p>
+            <button onclick="func7()">slice the phrase from (0, 5)</button>
+            <p id="result7">(Result)</p>
+            <br>
+            <p>slice the phrase from (<input type="number" id="sample7B1" style="width: 40px;">, <input type="number" id="sample7B2" style="width: 40px;">)</p>
+            <button onclick="func7B()">Show</button>
+            <p id="result7B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.substr()</h2>
+            <p>it extracts the specified index .substr(beginning, length that will be extracted):</p>
+            <p id="sample8">Hello World</p>
+            <button onclick="func8()">substr the phrase from (0, 5)</button>
+            <p id="result8">(Result)</p>
+            <br>
+            <p>substr the phrase from (<input type="number" id="sample8B1" style="width: 40px;">, <input type="number" id="sample8B2" style="width: 40px;">)</p>
+            <button onclick="func8B()">Show</button>
+            <p id="result8B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.replace()</h2>
+            <p>Replaces the first value that occured in a string .replace(`value that will be replaced`, `new value`):</p>
+            <p id="sample9">Hello World</p>
+            <button onclick="func9()">replace(`World`, `Everyone`)</button>
+            <p id="result9">(Result)</p>
+            <br>
+            <p>replace(<input type="text" id="sample9B1" style="width: 40px;">, <input type="text" id="sample9B2" style="width: 40px;">)</p>
+            <button onclick="func9B()">Show</button>
+            <p id="result9B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.replaceAll()</h2>
+            <p>Replaces all the value that occured in a string .replaceAll(`value that will be replaced`, `new value`):</p>
+            <p id="sample10">Hello World</p>
+            <button onclick="func10()">replaceAll(`o`, `u`)</button>
+            <p id="result10">(Result)</p>
+            <br>
+            <p>replace(<input type="text" id="sample10B1" style="width: 40px;">, <input type="text" id="sample10B2" style="width: 40px;">)</p>
+            <button onclick="func10B()">Show</button>
+            <p id="result10B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.split()</h2>
+            <p>Splits/Puts values into an array based on a delimiter:</p>
+            <p id="sample11">apple-banana-mango</p>
+            <button onclick="func11()">Split</button>
+            <p id="result11">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.trim()</h2>
+            <p>Removes whitespaces from left and right side of the string:</p>
+            <pre id="sample12">"    Hello, World    "</pre>
+            <button onclick="func12()">Trim</button>
+            <p id="result12">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.charAt()</h2>
+            <p>Returns the character at a specified index in a string:</p>
+            <p id="sample13">Hello World</p>
+            <button onclick="func13()">Show character at index 6</button>
+            <p id="result13">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.startsWith()</h2>
+            <p>Checks if a string starts with a specific value:</p>
+            <p id="sample14">Hello World</p>
+            <button onclick="func14()">Check if the phrase starts with K</button>
+            <p id="result14">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.endsWith()</h2>
+            <p>Checks if a string ends with a specific value:</p>
+            <p id="sample15">Hello World</p>
+            <button onclick="func15()">Check if the phrase ends with d</button>
+            <p id="result15">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.repeat()</h2>
+            <p>Repeats a value:</p>
+            <p id="sample16">Hello</p>
+            <button onclick="func16()">Repeat the word "Hello" 3 times</button>
+            <p id="result16">(Result)</p>
+            <br>
+            <p>repeat it <input type="number" id="sample16B" style="width: 40px;"> times</p>
+            <button onclick="func16B()">Show</button>
+            <p id="result16B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.padStart()</h2>
+            <p>Pads the start of a string with another string until the desired length is reached:</p>
+            <p id="sample17">Hello</p>
+            <button onclick="func17()">padStart "hi!" until it reach 20 characters</button>
+            <p id="result17">(Result)</p>
+            <br>
+            <p>padStart until it reaches<input type="number" id="sample17B" style="width: 40px;"> characters</p>
+            <button onclick="func17B()">Show</button>
+            <p id="result17B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>.padEnd()</h2>
+            <p>Pads the end of a string with another string until the desired length is reached:</p>
+            <p id="sample18">Hello</p>
+            <button onclick="func18()">padEnd "hi!" until it reach 20 characters</button>
+            <p id="result18">(Result)</p>
+            <br>
+            <p>padEnd until it reaches<input type="number" id="sample18B" style="width: 40px;"> characters</p>
+            <button onclick="func18B()">Show</button>
+            <p id="result18B">(Result)</p>
+        </div>
+
+
+    </section>
+
+    <section>
+        <h1>Number Methods</h1>
+        <div>
+            <h2>Number()</h2>
+            <p>Converts string to number</p>
+        </div>
+
+        <div>
+            <h2>toFixed()</h2>
+            <p>Sets number of decimal:</p>
+            <p id="sample19">19.1895</p>
+            <button onclick="func19()">Make it 2 decimal places</button>
+            <p id="result19">(Result)</p>
+        </div>
+
+        <div>
+            <h2>toPrecision()</h2>
+            <p>Sets number to specified length:</p>
+            <p id="sample20">1234.542</p>
+            <button onclick="func20()">Set length to 4</button>
+            <p id="result20">(Result)</p>
+        </div>
+
+        <div>
+            <h2>toString()</h2>
+            <p>Converts number to string</p>
+        </div>
+
+        <div>
+            <h2>Math.random()</h2>
+            <p>Generates random number from 0 to 1:</p>
+            <button onclick="func21()">Generate random number</button>
+            <p id="result21">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Math.ceil()</h2>
+            <p>Rounds a number up:</p>
+            <p id="sample22">14.3</p>
+            <button onclick="func22()">Show</button>
+            <p id="result22">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Math.floor()</h2>
+            <p>Rounds a number down:</p>
+            <p id="sample23">14.9</p>
+            <button onclick="func23()">Show</button>
+            <p id="result23">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Math.abs()</h2>
+            <p>Gives the absolute value of a number:</p>
+            <p id="sample24">-14.9</p>
+            <button onclick="func24()">Show</button>
+            <p id="result24">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Math.max()</h2>
+            <p>Gives the maximum number:</p>
+            <p id="sample25">1, 2, 3, 4, 5</p>
+            <button onclick="func25()">Show</button>
+            <p id="result25">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Math.min()</h2>
+            <p>Gives the minimum number:</p>
+            <p id="sample26">1, 2, 3, 4, 5</p>
+            <button onclick="func26()">Show</button>
+            <p id="result26">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Array Methods</h1>
+        <div>
+            <h2>push()</h2>
+            <p>Adds element to at the end of array:</p>
+            <p id="sample27">1, 2, 3, 4</p>
+            <button onclick="func27()">Add 5</button>
+            <p id="result27">(Result)</p>
+        </div>
+
+        <div>
+            <h2>unshift()</h2>
+            <p>Adds element to at the beginning of array:</p>
+            <p id="sample28">1, 2, 3, 4</p>
+            <button onclick="func28()">Add 5</button>
+            <p id="result28">(Result)</p>
+        </div>
+
+        <div>
+            <h2>pop()</h2>
+            <p>Removes the last element of array:</p>
+            <p id="sample29">1, 2, 3, 4, 5</p>
+            <button onclick="func29()">Show</button>
+            <p id="result29">(Result)</p>
+        </div>
+
+        <div>
+            <h2>shift()</h2>
+            <p>Removes the first element of array:</p>
+            <p id="sample30">1, 2, 3, 4, 5</p>
+            <button onclick="func30()">Show</button>
+            <p id="result30">(Result)</p>
+        </div>
+
+        <div>
+            <h2>splice()</h2>
+            <p>Removes n items of element starting a specific index:</p>
+            <p id="sample31">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func31()">Starting from index 2, remove 4 items</button>
+            <p id="result31">(Result)</p>
+            <br>
+            <p>You can also insert element:</p>
+            <p id="sample31B">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func31B()">Insert letters a,b,c at index 2</button>
+            <p id="result31B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>concat()</h2>
+            <p>Used to combine arrays:</p>
+            <p id="sample32">1, 2, 3, 4, 5</p>
+            <p id="sample32B">6, 7, 8, 9, 10</p>
+            <p id="sample32C">11, 12, 13, 14, 15</p>
+            <button onclick="func32()">Show</button>
+            <p id="result32">(Result)</p>
+        </div>
+
+        <div>
+            <h2>indexOf()</h2>
+            <p>Returns index in which element is seen first. displays -1 if element don't exist:</p>
+            <p id="sample33">1, 2, 3, 4, 5</p>
+            <button onclick="func33()">Find 4</button>
+            <p id="result33">(Result)</p>
+        </div>
+
+        <div>
+            <h2>forEach()</h2>
+            <p>Executes code for each element in an array:</p>
+            <p id="sample34">1, 2, 3, 4, 5</p>
+            <button onclick="func34()">list all elements</button>
+            <p id="result34">(Result)</p>
+        </div>
+
+        <div>
+            <h2>map()</h2>
+            <p>Changes elements in an array:</p>
+            <p id="sample35">1, 2, 3, 4, 5</p>
+            <button onclick="func35()">Multiply all by 2</button>
+            <p id="result35">(Result)</p>
+        </div>
+
+        <div>
+            <h2>filter()</h2>
+            <p>Filters elements in an array:</p>
+            <p id="sample36">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func36()">Show even numbers</button>
+            <p id="result36">(Result)</p>
+        </div>
+
+        <div>
+            <h2>find()</h2>
+            <p>Returns first element that satisfies a function:</p>
+            <p id="sample37">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func37()">Show first even number</button>
+            <p id="result37">(Result)</p>
+        </div>
+
+        <div>
+            <h2>findIndex()</h2>
+            <p>Returns first element that satisfies a function:</p>
+            <p id="sample38">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func38()">Show index of first even number</button>
+            <p id="result38">(Result)</p>
+        </div>
+
+        <div>
+            <h2>reverse()</h2>
+            <p>Reverses an array:</p>
+            <p id="sample39">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+            <button onclick="func39()">Show</button>
+            <p id="result39">(Result)</p>
+        </div>
+
+        <div>
+            <h2>sort()</h2>
+            <p>Sorts elements in a dictionary like arrangement:</p>
+            <p id="sample40">1, 7, 3, e, 5, 6, 3, b, 9, a</p>
+            <button onclick="func40()">Show</button>
+            <p id="result40">(Result)</p>
+        </div>
+
+        <div>
+            <h2>join()</h2>
+            <p>Combines elements into a string with a delimiter:</p>
+            <p id="sample41">1, 7, 3, e, 5, 6, 3, b, 9, a</p>
+            <button onclick="func41()">Show</button>
+            <p id="result41">(Result)</p>
+        </div>
+
+        <div>
+            <h2>every()</h2>
+            <p>Checks if every element in array satisfies a function:</p>
+            <p id="sample42">1, 2, 3, 4, 5</p>
+            <button onclick="func42()">All numbers are less than 10</button>
+            <p id="result42">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Loop Methods</h1>
+        <div>
+            <h2>for loop</h2>
+            <p>Executes a code repeatedly:</p>
+            <p id="sample43">What is the factorial of 5</p>
+            <button onclick="func43(5)">Show</button>
+            <p id="result43">(Result)</p>
+        </div>
+
+        <div>
+            <h2>for of loop</h2>
+            <p>Executes a code for every element in an array:</p>
+            <p id="sample44">List the numbers 1, 2, 3, 4, 5</p>
+            <button onclick="func44()">Show</button>
+            <p id="result44">(Result)</p>
+        </div>
+
+        <div>
+            <h2>for in loop</h2>
+            <p>Executes a code for every element in an object:</p>
+            <p id="sample45">Object1 = {key1: `value1`, key2: `value2`, key3: `value3`}</p>
+            <button onclick="func45()">Print every key</button>
+            <p id="result45">(Result)</p>
+            <button onclick="func45B()">Print every value in key</button>
+            <p id="result45B">(Result)</p>
+        </div>
+
+        <div>
+            <h2>while loop</h2>
+            <p>Executes a code repeatedly until condition is reached:</p>
+            <p id="sample46">Count until 5</p>
+            <button onclick="func46()">Show</button>
+            <p id="result46">(Result)</p>
+        </div>
+
+        <div>
+            <h2>do while loop</h2>
+            <p>Executes a code first before checking if condition is reached:</p>
+            <p id="sample47">Count until 5</p>
+            <button onclick="func47()">Show</button>
+            <p id="result47">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Javascript Events</h1>
+        <div>
+            <h2>click Event</h2>
+            <p>Activates when you click an element:</p>
+            <div class="box" id="sample48">CLICK THE BOX</div>
+        </div>
+
+        <div>
+            <h2>double click Event</h2>
+            <p>Activates when you double click an element:</p>
+            <div class="box" id="sample49">DOUBLE CLICK THE BOX</div>
+        </div>
+
+        <div>
+            <h2>mouseover Event</h2>
+            <p>Activates when you hover over an element:</p>
+            <div class="box" id="sample50">HOVER ON THE BOX</div>
+        </div>
+
+        <div>
+            <h2>mouseout Event</h2>
+            <p>Activates when you stop hovering over an element:</p>
+            <div class="box" id="sample51">HOVER ON THE BOX</div>
+        </div>
+
+        <div>
+            <h2>mousemove Event</h2>
+            <p>Activates when you move mouse within an element:</p>
+            <div class="box" id="sample52">HOVER ON THE BOX <span id="result52"></span></div>
+        </div>
+
+        <div>
+            <h2>mousedown Event</h2>
+            <p>Activates when you hold press an element:</p>
+            <h2>mouseup Event</h2>
+            <p>Activates when you release press button on an element:</p>
+            <div class="box" id="sample53">PRESS DOWN THE BOX</div>
+        </div>
+
+        <div>
+            <h2>keydown Event</h2>
+            <p>Activates when you press any key:</p>
+            <h2>keyup Event</h2>
+            <p>Activates when you release press  on any key:</p>
+            <div class="box" id="sample54">PRESS ANY KEY TO CHANGE COLOR</div>
+            <button id="func54">Activate Event Listener</button>
+            <button id="func54B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>event.key</h2>
+            <p>Activates when you press an assigned key:</p>
+            <div class="box" id="sample55">Press ENTER to receive an alert</div>
+            <button id="func55">Activate Event Listener</button>
+            <button id="func55B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>event.key combination</h2>
+            <p>Activates when you press combined keys:</p>
+            <div class="box" id="sample56">Press ENTER and CTRL key to receive an alert</div>
+            <button id="func56">Activate Event Listener</button>
+            <button id="func56B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>event.key with arrows</h2>
+            <p>Activates when you press arrow keys:</p>
+            <div class="box" id="container57">
+                <p class="miniBox" id="sample57"></p>
+            </div>
+            <button id="func57">Activate Event Listener</button>
+            <button id="func57B">Deactivate Event Listener</button>
+        </div>
+    </section>
+
+    <section>
+        <h1>Javascript Document Object Model (DOM)</h1>
+        <div>
+            <h2>.queryselector()</h2>
+            <p>Selects the first element that is specified:</p>
+            <li>use .queryselector(`div`) for html elements</li>
+            <li>use .queryselector(`#idName`) for id</li>
+            <li>use .queryselector(`.className`) for class</li>
+            <div class="box" id="sample58">CLICK THE BOX</div>
+            <br>
+            <h2>.queryselectorAll()</h2>
+            <p>Selects all elements that is specified:</p>
+            <li>use .queryselectorAll(`div`) for html elements</li>
+            <li>use .queryselectorAll(`#idName`) for id</li>
+            <li>use .queryselectorAll(`.className`) for class</li>
+            <div id="sample58B">
+            <div class="box selectBox">HOVER HERE TO CHANGE BOXES</div>
+            <div class="box selectBox">HOVER HERE TO CHANGE BOXES</div>
+            </div>
+        </div>
+
+        <div>
+            <h2>innerHTML</h2>
+            <p>Modifies html content:</p>
+            <div class="box" id="sample59">
+            </div>
+            <button id="func59">Activate Event Listener</button>
+            <button id="func59B">Deactivate Event Listener</button>
+            <br>
+            <h2>textContent</h2>
+            <p>Modifies the content:</p>
+            <div class="box" id="sample60">
+                CLICK BUTTON TO CHANGE
+            </div>
+            <button id="func60">Activate Event Listener</button>
+            <button id="func60B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>setAttribute()</h2>
+            <p>Sets attribute to an element including (id, href, img, class)</p>
+            <br>
+            <h2>removeAttribute()</h2>
+            <p>Removes attribute to an element:</p>
+            <div class="box">
+                ADD CAT
+                <img src="" id="sample61">
+            </div>
+            <button id="func61">Activate Event Listener</button>
+            <button id="func61B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>style.cssText()</h2>
+            <p>Used to set css to an element:</p>
+            <div id="sample62" class="box"></div>
+            <button id="func62">Activate Event Listener</button>
+            <button id="func62B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>classList.add()</h2>
+            <p>Adds class to an element</p>
+            <br>
+            <h2>classList.remove()</h2>
+            <p>Removes class to an element</p>
+            <div class="box" id="sample63">
+                ACTIVATE TO GET BIG
+            </div>
+            <button id="func63">Activate Event Listener</button>
+            <button id="func63B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>createElement()</h2>
+            <p>Creates a new element</p>
+            <br>
+            <h2>insertAdjacentElement()</h2>
+            <p>Lets you insert an element</p>
+            <li>beforebegin - inserts element before reference element</li>
+            <li>afterend - inserts element after reference element</li>
+            <li>beforeend - inserts element inside of reference element (at the beginning of the inside of reference element)</li>
+            <li>afterend - inserts element inside of reference element (at the end of the inside of reference element)</li>
+            <h2>remove()</h2>
+            <p>Removes an element</p>
+            <br>
+            <div class="box" id="sample64">
+            </div>
+            <button id="func64">Activate Event Listener</button>
+            <button id="func64B">Deactivate Event Listener</button>
+        </div>
+
+        <div>
+            <h2>replaceWith()</h2>
+            <p>Used to replace an element:</p>
+            <div class="box">
+                <p id="sample65">THIS WILL BE REPLACED</p>
+            </div>
+            <button id="func65">Activate Event Listener</button>
+            <button id="func65B">Deactivate Event Listener</button>
+        </div>
+    </section>
+
+    <section>
+        <h1>If statements</h1>
+        <div>
+            <h2>if, else if, else</h2>
+            <p>Used to set a condition:</p>
+            <li>if - used if there is one condition</li>
+            <li>else - used if there is two condition (code will be executed if "if" is not meet)</li>
+            <li>else if - used if there there is three conditions</li>
+            <br>
+            <input type="number" id="sample66" placeholder="Enter age" min="1">
+            <button id="func66">Submit</button>
+            <p id="result66">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Ternary operators</h2>
+            <p>Modern "if" statement:</p>
+            <input type="number" id="sample67" placeholder="Enter age" min="1">
+            <button id="func67">Submit</button>
+            <p id="result67">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Switch statement</h2>
+            <p>Modern "if" statement but can't handle conditions involving comparison (only '==='):</p>
+            <input type="number" id="sample68" placeholder="Enter age" min="1">
+            <button id="func68">Submit</button>
+            <p id="result68">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Objects</h1>
+        <div>
+            <h2>Accessing values in object</h2>
+            <pre class="objectBox">const obj = {
+                name: `Hello World`,
+                age: 2024,
+                random: [`x`, 6, `hello`]
+            };
+            </pre>
+            <br>
+            <li>"Object.keys(obj)" to access key</li>
+            <li>"obj[`age`]" to access value</li>
+            <li>"obj.random[3]" to access value of a key with array</li>
+            <br>
+            <button id="func69">Show</button>
+            <p id="result69">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Modifying/Adding property of Object</h2>
+            <p>If the key exists in object, value will be replace. If not key will be added to the object:</p>
+            <pre class="objectBox">const obj70 = {
+                name: `Hello World`,
+                age: 2024,
+                random: [`x`, 6, `hello`]
+            };
+            </pre>
+            <br>
+            <li>" obj70.city = `New York` " to add new key</li>
+            <li>" obj70.age = 24 " to change age value</li>
+            <li>" delete obj70.random "</li>
+            <br>
+            <button id="func70">Show</button>
+            <button id="func70B">Delete random</button>
+            <p id="result70">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Using this</h2>
+            <p>Used as a shortcut for calling an object (can only be activated inside closure of object):</p>
+            <pre class="objectBox">const obj71 = {
+                name: `Hello World`,
+                age: 2024,
+                greet: ()=>{
+                    text71.textContent = `this.name + this.age`;
+                }
+            };
+            </pre>
+            <br>
+            <br>
+            <button id="func71">Show</button>
+            <p id="result71">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Object.keys()</h2>
+            <p>Lets you access keys of object</p>
+            <h2>Object.values()</h2>
+            <p>Lets you access values of object</p>
+            <pre class="objectBox">const obj72 = {
+                name: `Hello World`,
+                age: 2024,
+                city: `New York
+            };
+            </pre>
+            <br>
+            <button id="func72">Show Keys</button>
+            <button id="func72B">Show Values</button>
+            <p id="result72">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>JSON</h1>
+        <div>
+            <h2>JSON.parse()</h2>
+            <p>Converts JSON string into an object</p>
+            <pre class="objectBox">
+                const JSON73 = `{
+                    "name": "dcode",
+                    "age": 35,
+                    "graduated": true,
+                    "favoriteColor": ["blue", "green"]
+                }`;
+            </pre>
+            <br>
+            <button id="func73">Show</button>
+            <p id="result73">(Result)</p>
+            <br>
+
+            <h2>JSON.stringify()</h2>
+            <p>Creates a JSON string</p>
+            <button id="func74">Show</button>
+            <p id="result74">(Result)</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Asynchronous Programming</h1>
+        <div>
+            <h2>setTimeout()</h2>
+        <p>used to set time for an execution of a code</p>
+        <br>
+        <button id="func75">Say hello in 3 seconds</button>
+        <p id="result75">(Result)</p>
+        </div>
+
+        <div>
+            <h2>callback</h2>
+        <p>this allows you to execute a code first before proceeding to another</p>
+        <br>
+        <button id="func76">Say hello after 3s and world after 2s and say done after 1s</button>
+        <p id="result76">(Result)</p>
+        </div>
+
+        <div>
+            <h2>Promise</h2>
+        <p>used to make sure a code is executed first before other codes</p>
+        <pre class="objectBox">new Promise((resolve, reject)=>{
+            (code to be executed)
+            resolve();    
+        });</pre>
+        <h2>then()</h2>
+        <p>used to instruct what to execute after a function is finished</p>
+        <br>
+        <button id="func77">Say hello after 3s and world after 2s and say done after 1s</button>
+        <p id="result77">(Result)</p>
+        <br>
+        <p>Other example:</p>
+        <pre class="objectBox">
+
+const authenticateUser = (username, password) => {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            const correctUsername = "user123";
+            const correctPassword = "password123";
+
+
+            if (username === correctUsername && password === correctPassword) {
+                resolve("Authentication successful! Welcome, " + username + "!");
+            } else {
+                reject("Authentication failed! Invalid username or password.");
+            }
+        }, 2000);
+    });
+};
+
+
+const usernameInput = "user123";test different scenarios
+const passwordInput = "password123";
+
+authenticateUser(usernameInput, passwordInput)
+    .then(successMessage => {
+        console.log(successMessage);
+    })
+    .catch(errorMessage => {
+        console.error(errorMessage); authentication fails
+    });
+
+        </pre>
+        <br>
+        <h2>Promise.all</h2>
+        <p>used to instruct what to execute after all functions are finished</p>
+        <p>Example:</p>
+        <pre class="objectBox">
+            const promise1 = Promise.resolve("Promise 1 fulfilled!");
+const promise2 = Promise.resolve("Promise 2 fulfilled!");
+const promise3 = new Promise((resolve) => setTimeout(resolve, 1000, "Promise 3 fulfilled!"));
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+
+        </pre>
+        <br>
+        <h2>Promise.race()</h2>
+        <p>used to instruct what to execute after any of the functions are finished</p>
+        <p>Example:</p>
+        <pre class="objectBox">
+            const promiseA = new Promise((resolve) => setTimeout(resolve, 1000, "A"));
+const promiseB = new Promise((resolve) => setTimeout(resolve, 2000, "B"));
+
+Promise.race([promiseA, promiseB])
+    .then((result) => {
+        console.log(result);
+    });
+        </pre>
+        </div>
+
+        <div>
+            <h2>async and await</h2>
+        <p>an alternative to callback and promise</p>
+        <br>
+        <button id="func78">Say hello after 3s and world after 2s and say done after 1s</button>
+        <p id="result78">(Result)</p>
+        </div>
+        
+        <div>
+            <h2>Fetch API</h2>
+        <p>used to interact with api</p>
+        <br>
+        <div id="div79">
+
+                <input type="text" id="func79" placeholder="Search Pokemon">
+                <button onclick="function79()">Search</button>
+
+            
+            <div id="result79"></div>
+            
+        </div>
+        </div>
+        
+    </section>
+
+    <script src="jsLessons.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+body{
+    padding: 25px;
+    margin: 0;
+    background: black;
+}
+
+section{
+    border: 1px solid black;
+    max-width: 100%;
+    min-height: 400px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: gray;
+}
+
+img{
+    background-color: white;
+}
+
+button{
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+    border: none;
+}
+
+input{
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+h1{
+    font-family: sans-serif;
+}
+
+section h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+section div{
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 25px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    background-color: rgb(228, 228, 228);
+}
+
+button{
+    padding: 5px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    position: relative;
+    background-color: white;
+}
+
+.miniBox{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+#container57{
+    overflow: hidden;
+}
+
+.selectBox{
+    transition: 1s ease;
+}
+
+#sample58B{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 350px;
+    border: none;
+}
+
+#innerBox59{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sample61{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.getBig{
+    padding: 100px;
+}
+
+#sample64{
+    padding: 5%;
+    margin-bottom: 5px;
+}
+
+#sample64 p{
+    padding: 5px 3px;
+    background-color: red;
+    margin: 3px;
+    width: 100px;
+    color: white;
+}
+
+#sample66,
+#sample67,
+#sample68{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.objectBox{
+    padding: 5px;
+    border: 1px solid black;
+    width: 90%;
+    overflow-x: auto;
+    background-color: white;
+}
+
+.red{
+    background-color: red;
+    padding: 3px;
+    width: 100px;
+    text-align: center;
+    color: white;
+}
+
+#result74{
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+#result79{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    flex-wrap: wrap;
+}
+
+#div79{
+    border: none;
+}
+
+.image79{
+    border: 1px solid black;
+    width: 200px;
+}
+
+
